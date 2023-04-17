@@ -4,7 +4,7 @@ import { ChangeEvent, Dispatch, FormEvent, useState, SetStateAction } from 'reac
 //     onNewCategory: (setCategories: SetStateAction<string[]>) => void;
 // }
 
-export const AddCategory = ( {onNewCategory} : any ) => {
+export const AddCategory = ( {onNewCategory}: any ) => {
 
     const [inputValue, setInputValue] = useState('');
 

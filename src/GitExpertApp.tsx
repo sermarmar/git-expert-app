@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
+import { GitGrid } from './components/GitGrid';
 
 
 export const GitExpertApp = () => {
 
-    const [ categories, setCategories ] = useState(['Demon Slayer', 'Hero Academy']);
+    const [ categories, setCategories ] = useState(['Demon Slayer']);
 
     // const onAddCategory = () => {
     //     setCategories( ['Pokemon', ...categories] );
@@ -20,28 +21,23 @@ export const GitExpertApp = () => {
     return (
 
         <div>
-            {/* Titulo */}
             <h1>GitExpertApp</h1>
 
-            {/* busqueda */}
             <AddCategory 
                 // newCategory={ setCategories } 
                 onNewCategory={ (value: string) => handleAddCategory(value) }
             />
             <ol>
-                { categories.map(category => {
-                    return <li key={category}> {category} </li>
-                }) }
+                { 
+                    categories.map(category => ( 
+                        <GitGrid 
+                            key={ category }
+                            category={ category }
+                        /> 
+                    ))
+                }
             </ol>
         </div>
 
     );
 }
-
-/* function GitExpertApp() {
-    return (
-        <h1>GitExpertApp</h1>
-    );
-}
-
-export default GitExpertApp; */
