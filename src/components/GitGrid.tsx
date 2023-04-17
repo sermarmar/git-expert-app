@@ -1,4 +1,3 @@
-
 import { GitItem } from './GifItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 
