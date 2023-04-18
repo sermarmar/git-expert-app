@@ -1,16 +1,9 @@
 import { useState } from 'react';
-import { AddCategory } from './components/AddCategory';
-import { GitGrid } from './components/GitGrid';
-
+import { AddCategory, GitGrid } from './components';
 
 export const GitExpertApp = () => {
 
     const [ categories, setCategories ] = useState(['Demon Slayer']);
-
-    // const onAddCategory = () => {
-    //     setCategories( ['Pokemon', ...categories] );
-    //     setCategories(category => [...category, 'Pokemon']);
-    // }
 
     const handleAddCategory = (newCategory: string) => {
         if( categories.map(s => s.toLowerCase()).includes(newCategory.toLowerCase()) ) return;
