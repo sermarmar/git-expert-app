@@ -7,7 +7,6 @@ export const GitExpertApp = () => {
 
     const handleAddCategory = (newCategory: string) => {
         if( categories.map(s => s.toLowerCase()).includes(newCategory.toLowerCase()) ) return;
-
         setCategories( [newCategory, ...categories] );
     };
 
@@ -17,7 +16,6 @@ export const GitExpertApp = () => {
             <h1>GitExpertApp</h1>
 
             <AddCategory 
-                // newCategory={ setCategories } 
                 onNewCategory={ (value: string) => handleAddCategory(value) }
             />
             <ol>
