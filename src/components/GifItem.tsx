@@ -10,4 +10,4 @@ export const GitItem = ({ title, url }: GitItemProps) => {
             <p>{ title }</p>
         </div>
     )
-}
+} 
